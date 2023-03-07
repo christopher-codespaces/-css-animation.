@@ -1,0 +1,49 @@
+.logo-image {
+  width: 100px;
+  height: 100px;
+  transition: all 10s ease-in-out;
+  border-radius: 50%;
+  
+}
+
+.logo-image:hover {
+  filter: brightness(1.2);
+  animation-name: color-change;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+.logo-image:hover::before {
+  content: "Hovering over image!";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: pink;
+  background-color: tomato;
+  padding: 5px;
+  width: 150px;
+  height: 50px;
+  border-radius: 0;
+
+}
+
+@keyframes color-change {
+  0% {
+    filter: hue-rotate(20deg);
+    transform: translateY(0);
+}
+  50% {
+    filter: hue-rotate(180deg);
+    transform: translateY(50px);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: translateY(0);
+  }
+}
+
+
+
+
